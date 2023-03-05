@@ -63,7 +63,7 @@ function ProjectsList(props){
     }
 
     useEffect(() => {
-        fetch('https://cxef3s02t6.execute-api.us-east-1.amazonaws.com/projects')
+        fetch('https://api.bidos.net/projects')
             .then(resp => resp.json())
             .then(obj => obj['projects']['Items'])
             .then(data => {
@@ -134,7 +134,7 @@ function ProjectsPage(){
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        fetch('https://cxef3s02t6.execute-api.us-east-1.amazonaws.com/projects')
+        fetch('https://api.bidos.net/projects')
             .then(resp => resp.json())
             .then(obj => obj['projects']['Items'])
             .then(data => {

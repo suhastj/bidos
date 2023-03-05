@@ -41,7 +41,7 @@ function ProjectPage(props){
 
     useEffect(() => {
         const t = async () => {
-            fetch('https://cxef3s02t6.execute-api.us-east-1.amazonaws.com/projects/search?name=' + props.projectName.replaceAll('_', ' '))
+            fetch('https://api.bidos.net/projects/search?name=' + props.projectName.replaceAll('_', ' '))
                 .then(resp => resp.json())
                 .then(obj => obj['projects']['Items'][0])
                 .then(proj => {
